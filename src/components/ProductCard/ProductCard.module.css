@@ -1,0 +1,24 @@
+.containerBtnPrice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btnCardShop {
+  background-color: #800080 !important;
+  border: none !important;
+}
+.linkBtn {
+  color: white !important;
+  text-decoration: none !important;
+}
+.btnCardShop:hover {
+  transform: scale(1.1);
+}
+
+@media only screen and (max-width: 780px) {
+  .cardProduct {
+    margin-bottom: 1rem;
+    width: 100% !important;
+  }
+}

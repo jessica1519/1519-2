@@ -1,0 +1,73 @@
+.card {
+  background-color: #293133 !important; /**/
+  padding: 1rem;
+  width: 30%;
+  margin-left: 1rem;
+  opacity: 70%;
+  margin-top: 15rem;
+  border: none !important;
+}
+.titleCard {
+  border: none !important;
+  background-color: transparent !important;
+  padding-bottom: 1rem !important;
+  font-size: 2.5rem !important;
+  color: #f72585 !important;
+  font-weight: bolder;
+  font-style: italic;
+  /*text-shadow: lightblue 1px 0 10px;*/
+}
+
+.textCard {
+  align-items: center;
+  text-shadow: 2px 0 2px black, 0 2px 2px #000;
+  color: white !important;
+  font-size: 1rem !important;
+  font-weight: bolder;
+}
+.btnCard {
+  border-radius: 22px !important;
+  background-color: #f72585 !important;
+  border: none !important;
+  width: 8rem !important;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.linkBtnCard {
+  background-color: transparent;
+  color: white !important;
+  text-decoration: none !important;
+}
+.btnCard:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  background-color: #3a0ca3 !important;
+  zoom: 1.1;
+}
+@media only screen and (max-width: 780px) {
+  .textCard {
+    margin-bottom: 1rem !important;
+  }
+  .card {
+    background-color: #293133 !important;
+    width: 70%;
+    padding: 2rem !important;
+    margin-top: 30rem !important;
+    border: none !important;
+
+    align-items: center;
+  }
+}
+@media all and (device-width: 834px) and (device-height: 1112px) and (orientation: landscape) {
+  .textCard {
+    margin-bottom: 1rem !important;
+  }
+  .card {
+    background-color: #293133 !important;
+    width: 70%;
+    padding: 2rem !important;
+    margin-top: 30rem !important;
+    border: none !important;
+
+    align-items: center;
+  }
+}

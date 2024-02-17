@@ -1,0 +1,38 @@
+.LinkNavBar {
+  justify-content: right;
+  color: #3a0ca3 !important;
+  margin-right: 2rem;
+  background-color: transparent !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+}
+.navBar {
+  background-color: white !important;
+}
+.LinkNavBar:hover,
+.iconCart :hover {
+  color: #f72585 !important;
+}
+.logo {
+  font-style: italic;
+  color: #3a0ca3 !important;
+  font-weight: bold !important;
+}
+.iconCart {
+  color: #3a0ca3 !important;
+}
+.iconCart:hover {
+  cursor: pointer;
+}
+.numberItems {
+  color: #3a0ca3 !important;
+  margin-left: 0.5rem;
+}
+.containerCart {
+  display: flex;
+}
+@media only screen and (max-width: 780px) {
+  .logo {
+    margin: 1rem;
+  }
+}

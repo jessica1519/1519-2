@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  padding: 0;
+  /* font-family: Roboto !important;*/
+
+  font-family: "Open Sans", sans-serif !important;
+  -webkit-font-smoothing: antialiased !important;
+  letter-spacing: 0.1rem;
+  line-height: 1.6 !important;
+}
+
+.dropdown-toggle::after {
+  color: white !important;
+} /*freccia dropdown navbar*/
+/*.dropdown-menu.show {
+  background-color: transparent;
+  border: none;
+  opacity: 70%;
+} /*menu a comparsa navBar*/
+._form_17wns_1.form-select {
+  color: black !important;
+  background-color: transparent !important;
+}
+
+.form-select > option {
+  color: #800080 !important;
+}
+.navbar-toggler {
+  margin: 1rem;
+  color: white !important;
+}
+
+@media only screen and (max-width: 780px) {
+  .form-select > option {
+    width: fit-content !important;
+    padding: 0rem;
+    font-size: 0.5rem;
+  }
+  ._form_17wns_1.form-select {
+    width: fit-content;
+    padding-right: 1.5rem;
+    font-size: 1rem;
+  }
+  .mb-4 p {
+    display: none;
+  } /*nascondere text footer*/
+}
+.mb-4 p {
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+} /*text footer*/
+._card_18ybk_1 {
+  margin: 0 auto;
+}

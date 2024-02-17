@@ -1,0 +1,21 @@
+.homeContainer {
+  background-image: url("../../assets/imgHome/21.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  min-height: 100vh;
+}
+@media only screen and (max-width: 780px) {
+  .homeContainer {
+    background-image: url("../../assets/imgHome/17.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media all and (device-width: 780px) and (device-height: 1400px) and (orientation: landscape) {
+  .homeContainer {
+    background-image: url("../../assets/imgHome/17.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
