@@ -23,7 +23,7 @@ body {
 }
 
 .form-select > option {
-  color: #800080 !important;
+  color: black !important;
 }
 .navbar-toggler {
   margin: 1rem;
@@ -35,6 +35,7 @@ body {
     width: fit-content !important;
     padding: 0rem;
     font-size: 0.5rem;
+    color: black !important;
   }
   ._form_17wns_1.form-select {
     width: fit-content;
