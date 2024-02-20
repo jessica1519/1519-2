@@ -5,8 +5,6 @@ import ItemProduct from "../../components/ItemProduct/ItemProduct.jsx";
 import { products, felpe, gadgets } from "../../data/products.js";
 import Footer from "../../components/Footer/Footer.jsx";
 import { useParams } from "react-router-dom";
-import { useState } from "react";
-import Cart from "../Cart/Cart.jsx";
 
 export default function ArticleShop() {
   const params = useParams();

@@ -79,7 +79,8 @@ export const gadgets = [
     src: "/static/images/imgHome/2.jpg",
     title: "GADGET 1",
     price: 129.99,
-    description: "ADESIVO",
+
+    description: "plastica",
 
     gallery: [
       "/static/images/imgHome/2.jpg",
@@ -92,7 +93,7 @@ export const gadgets = [
     src: "/static/images/imgHome/2.jpg",
     title: "GADGET 2",
     price: 129.99,
-    description: "PORTACHIAVI",
+    description: "plastica",
 
     gallery: [
       "/static/images/imgHome/2.jpg",

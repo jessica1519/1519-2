@@ -10,24 +10,20 @@ export default function Shop() {
   return (
     <>
       <Header></Header>
-      <div className={styles.containerShop}>
-        <IntroTextShop></IntroTextShop>
+      <IntroTextShop></IntroTextShop>
+      <div className={styles.containerCardShop}>
+        {products.map((el) => (
+          <ProductCard {...el} key={el.id} />
+        ))}
 
-        <div className={styles.containerCardShop}>
-          {products.map((el) => (
-            <ProductCard {...el} key={el.id} />
-          ))}
-        </div>
-        <div className={styles.containerCardShop}>
-          {felpe.map((el) => (
-            <ProductCard {...el} key={el.id}></ProductCard>
-          ))}
-          {gadgets.map((el) => (
-            <ProductCard {...el} key={el.id}></ProductCard>
-          ))}
-        </div>
-        <Footer></Footer>
+        {felpe.map((el) => (
+          <ProductCard {...el} key={el.id}></ProductCard>
+        ))}
+        {gadgets.map((el) => (
+          <ProductCard {...el} key={el.id}></ProductCard>
+        ))}
       </div>
+      <Footer></Footer>
     </>
   );
 }
