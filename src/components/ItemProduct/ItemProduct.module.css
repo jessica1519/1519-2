@@ -14,26 +14,34 @@
   background-color: transparent !important;
 }
 .btnCardShop {
-  background-color: #3a0ca3 !important;
+  background-color: transparent !important;
   border: none !important;
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
   margin-right: 1rem !important;
   border-radius: 1.25rem !important;
   padding: 0.5rem 1rem !important;
 }
 .btnCardShop:hover {
   transform: scale(1.1);
-  background-color: #f72585 !important;
+  /*background-color: #3a0ca3 !important;*/
+}
+.linkCardShop:hover {
+  color: #f72585 !important;
 }
 .linkCardShop {
-  color: white !important;
+  color: #3a0ca3 !important;
+  font-weight: bolder;
+
   text-decoration: none !important;
 }
 .containerBtn {
-  margin-top: 5rem;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   width: 100%;
+  background-color: #f2dcff;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+  padding: 3rem;
 }
 .containerLink {
   display: flex;
@@ -50,24 +58,32 @@
 .btnSize {
   background-color: transparent !important;
   color: black !important;
-
   border: solid black 1px !important;
   border-radius: 10px !important;
   margin-right: 0.5rem !important;
   margin-bottom: 1rem !important;
   margin-top: 1rem !important;
 }
+.btnSize:focus {
+  background-color: #3a0ca3 !important;
+  color: white !important;
+  border: none !important;
+}
 @media only screen and (max-width: 780px) {
   .containerBtn {
     flex-wrap: wrap;
-    margin-top: 2rem;
+    padding: 1rem !important;
   }
   .contentItemProduct {
-    padding: 2rem;
     margin-top: 3rem;
     margin-bottom: 5rem;
+    display: block !important;
   }
   .btnCardShop {
     margin-top: 1rem;
+  }
+  .cardText {
+    text-align: center !important;
+    margin: 0 auto !important;
   }
 }

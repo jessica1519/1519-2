@@ -2,3 +2,9 @@
   width: 40% !important;
   height: 40%;
 }
+@media only screen and (max-width: 780px) {
+  .contenitorCarousel {
+    width: 80% !important;
+    margin: 0 auto !important;
+  }
+}
