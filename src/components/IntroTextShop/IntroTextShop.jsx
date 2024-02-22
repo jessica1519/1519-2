@@ -1,13 +1,10 @@
-import Card from "react-bootstrap/Card";
 import styles from "./IntroTextShop.module.css";
-import MyImageCarousel from "../CarouselShop/CarouselShop";
 
 function IntroTextShop() {
   return (
-    <Card className={styles.card}>
-      <MyImageCarousel></MyImageCarousel>
+    <>
       {/*<section className={styles.containerIntroImgShop}></section>*/}
-      <section className={styles.titleIntroShop}>
+      <section className={styles.textIntroShop}>
         <p>
           Ci rivolgiamo principalmente a coloro che cercano un abbigliamento che
           rifletta il loro spirito creativo e ribelle, concentrandosi su design
@@ -17,7 +14,7 @@ function IntroTextShop() {
           vita proveniente dalla strada.
         </p>
       </section>
-    </Card>
+    </>
   );
 }
 

@@ -4,12 +4,14 @@ import styles from "./Shop.module.css";
 import ProductCard from "../../components/ProductCard/ProductCard.jsx";
 import { products, gadgets, felpe } from "../../data/products.js";
 import IntroTextShop from "../../components/IntroTextShop/IntroTextShop.jsx";
+import MyImageCarousel from "../../components/CarouselShop/CarouselShop.jsx";
 import Footer from "../../components/Footer/Footer.jsx";
 
 export default function Shop() {
   return (
     <>
       <Header></Header>
+      <MyImageCarousel></MyImageCarousel>
       <IntroTextShop></IntroTextShop>
       <div className={styles.containerCardShop}>
         {products.map((el) => (

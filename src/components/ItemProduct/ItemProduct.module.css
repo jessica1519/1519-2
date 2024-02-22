@@ -23,6 +23,7 @@
 }
 .btnCardShop:hover {
   transform: scale(1.1);
+  background-color: #f72585 !important;
 }
 .linkCardShop {
   color: white !important;

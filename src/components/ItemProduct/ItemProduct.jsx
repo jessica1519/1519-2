@@ -22,7 +22,6 @@ export default function ItemProduct({ product }) {
   function selectSize(size) {
     setSizeSelected(size);
   }
-  console.log(sizeSelected);
 
   const { addToCart } = useContext(CartContext);
 
