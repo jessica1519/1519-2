@@ -17,7 +17,7 @@ body {
   border: none;
   opacity: 70%;
 } /*menu a comparsa navBar*/
-._form_17wns_1.form-select {
+.form-select {
   color: black !important;
   background-color: transparent !important;
 }
@@ -37,7 +37,7 @@ body {
     font-size: 0.5rem;
     color: black !important;
   }
-  ._form_17wns_1.form-select {
+  .form-select {
     width: fit-content;
 
     font-size: 1rem;
