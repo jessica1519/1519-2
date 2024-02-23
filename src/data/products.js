@@ -76,29 +76,27 @@ export const felpe = [
 export const gadgets = [
   {
     id: "p5",
-    src: "/static/images/imgHome/2.jpg",
-    title: "GADGET 1",
+    src: "/static/images/imgProduct/gadget/adesivo2.jpeg",
+    title: "ADESIVO",
     price: 129.99,
 
     description: "plastica",
 
     gallery: [
-      "/static/images/imgHome/2.jpg",
-      "/static/images/imgHome/2.jpg",
-      "/static/images/imgHome/2.jpg",
+      "/static/images/imgProduct/gadget/adesivo1.jpeg",
+      "/static/images/imgProduct/gadget/adesivo2.jpeg",
     ],
   },
   {
     id: "p6",
-    src: "/static/images/imgHome/2.jpg",
-    title: "GADGET 2",
+    src: "/static/images/imgProduct/gadget/portachiavi2.jpeg",
+    title: "PORTACHIAVI",
     price: 129.99,
     description: "plastica",
 
     gallery: [
-      "/static/images/imgHome/2.jpg",
-      "/static/images/imgHome/2.jpg",
-      "/static/images/imgHome/2.jpg",
+      "/static/images/imgProduct/gadget/portachiavi1.jpeg",
+      "/static/images/imgProduct/gadget/portachiavi2.jpeg",
     ],
   },
 ];
