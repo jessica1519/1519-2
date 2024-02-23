@@ -30,11 +30,9 @@ export default function ItemProduct({ product }) {
       <div className={styles.containerBtn}>
         {[...products, ...felpe, ...gadgets].map((el) => (
           <div key={el.title}>
-            <Button className={styles.btnCardShop} variant="primary">
-              <Link className={styles.linkCardShop} to={"/shop/" + el.id}>
-                {el.title}
-              </Link>
-            </Button>
+            <Link className={styles.linkCardShop} to={"/shop/" + el.id}>
+              {el.title}
+            </Link>
           </div>
         ))}
       </div>
@@ -86,7 +84,7 @@ export default function ItemProduct({ product }) {
                     size: sizeSelected,
                   })
                 }
-                className={styles.btnCardShop}
+                className={styles.btnAddCart}
                 variant="primary"
               >
                 Add to Cart

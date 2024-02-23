@@ -13,10 +13,15 @@
 .iconCart :hover {
   color: #f72585 !important;
 }
-.logo {
+.linkLogo {
   font-style: italic;
   color: #3a0ca3 !important;
   font-weight: bold !important;
+  padding: 0rem !important;
+  text-decoration: none !important;
+}
+.linkLogo:hover {
+  color: #f72585 !important;
 }
 .iconCart {
   color: #3a0ca3 !important;

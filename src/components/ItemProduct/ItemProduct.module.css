@@ -13,26 +13,27 @@
   color: black !important;
   background-color: transparent !important;
 }
-.btnCardShop {
-  background-color: transparent !important;
-  border: none !important;
-  /* box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);*/
-  margin-right: 1rem !important;
+
+.btnAddCart {
+  background-color: #3a0ca3 !important;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 1.25rem !important;
   padding: 0.5rem 1rem !important;
+  border: none !important;
 }
-.btnCardShop:hover {
+
+.btnAddCart:hover {
   transform: scale(1.1);
-  /*background-color: #3a0ca3 !important;*/
+  background-color: #f72585 !important;
 }
-.linkCardShop:hover {
-  color: #f72585 !important;
-}
+
 .linkCardShop {
   color: #3a0ca3 !important;
   font-weight: bolder;
-
   text-decoration: none !important;
+}
+.linkCardShop:hover {
+  color: #f72585 !important;
 }
 .containerBtn {
   display: flex;
@@ -40,17 +41,14 @@
   width: 100%;
   background-color: #f2dcff;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
   padding: 3rem;
 }
-.containerLink {
-  display: flex;
-}
+
 .linkSizeColor {
   color: white !important;
-
   margin: 0.5rem;
 }
+
 .containerBtnSize {
   display: flex;
   margin-bottom: 1rem;
@@ -69,10 +67,12 @@
   color: white !important;
   border: none !important;
 }
+
 @media only screen and (max-width: 780px) {
   .containerBtn {
     flex-wrap: wrap;
-    padding: 1rem !important;
+    padding: 0.5rem !important;
+    justify-content: center !important;
   }
   .contentItemProduct {
     margin-top: 3rem;
@@ -85,5 +85,9 @@
   .cardText {
     text-align: center !important;
     margin: 0 auto !important;
+  }
+  .linkCardShop {
+    padding: 0.5rem !important;
+    font-size: 0.8rem;
   }
 }

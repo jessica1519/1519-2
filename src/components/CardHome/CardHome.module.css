@@ -1,5 +1,5 @@
 .card {
-  background-color: #293133 !important; /**/
+  background-color: #293133 !important;
   padding: 1rem;
   width: 30%;
   margin-left: 1rem;
@@ -50,24 +50,21 @@
   .card {
     background-color: #293133 !important;
     width: 70%;
-    padding: 2rem !important;
     margin-top: 30rem !important;
+    padding: 1rem !important;
     border: none !important;
-
+    margin-bottom: 1rem !important;
     align-items: center;
   }
 }
 @media all and (device-width: 834px) and (device-height: 1112px) and (orientation: landscape) {
-  .textCard {
-    margin-bottom: 1rem !important;
-  }
   .card {
     background-color: #293133 !important;
     width: 70%;
     padding: 2rem !important;
     margin-top: 30rem !important;
     border: none !important;
-
     align-items: center;
+    margin-bottom: 1rem !important;
   }
 }

@@ -14,7 +14,11 @@ export default function Header() {
   return (
     <Navbar expand="lg" className={styles.navBar}>
       <Container>
-        <Navbar.Brand className={styles.logo}>#1519</Navbar.Brand>
+        <Navbar.Brand>
+          <Link className={styles.linkLogo} to="/">
+            #1519
+          </Link>
+        </Navbar.Brand>
         <div>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
