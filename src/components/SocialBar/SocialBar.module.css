@@ -1,0 +1,16 @@
+.iconSocial {
+  color: black;
+  width: 2rem !important;
+  height: 2rem !important;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+  margin: 0.5rem;
+  border: solid 1px white;
+  border-radius: 10px;
+}
+.iconSocial:hover {
+  background-color: white;
+  color: black;
+}

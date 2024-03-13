@@ -4,7 +4,7 @@ export const products = [
     src: "/static/images/imgProduct/grafica1/bianca-copertina.jpg",
     title: "GRAFICA 1",
     description: "cotone",
-    price: 129.99,
+    price: 20.99,
     size: {
       donna: ["S", "M", "L"],
       uomo: ["S", "M", "L"],
@@ -21,7 +21,7 @@ export const products = [
     src: "/static/images/imgProduct/grafica2/nera-copertina.jpg",
     title: "GRAFICA 2",
     description: "cotone",
-    price: 129.99,
+    price: 20.99,
     size: {
       donna: ["S", "M", "L"],
       uomo: ["S", "M", "L"],
@@ -40,7 +40,7 @@ export const products = [
     src: "/static/images/imgProduct/grafica3/bianca-copertina.jpg",
     title: "GRAFICA 3",
     description: "cotone",
-    price: 129.99,
+    price: 20.99,
     size: {
       donna: ["S", "M", "L"],
       uomo: ["S", "M", "L"],
@@ -59,7 +59,7 @@ export const felpe = [
     src: "/static/images/imgProduct/felpe/nera-copertina.jpg",
     title: "FELPE",
     description: "cotone",
-    price: 129.99,
+    price: 30.99,
     size: {
       donna: ["S", "M", "L"],
       uomo: ["S", "M", "L"],
@@ -78,7 +78,7 @@ export const gadgets = [
     id: "p5",
     src: "/static/images/imgProduct/gadget/adesivo2.jpeg",
     title: "ADESIVO",
-    price: 129.99,
+    price: 5.99,
 
     description: "plastica",
 
@@ -91,7 +91,7 @@ export const gadgets = [
     id: "p6",
     src: "/static/images/imgProduct/gadget/portachiavi2.jpeg",
     title: "PORTACHIAVI",
-    price: 129.99,
+    price: 12.99,
     description: "plastica",
 
     gallery: [

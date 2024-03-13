@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  MDBFooter,
-  MDBContainer,
-  MDBCol,
-  MDBRow,
-  MDBBtn,
-} from "mdb-react-ui-kit";
+import { MDBFooter, MDBContainer, MDBCol, MDBRow } from "mdb-react-ui-kit";
 
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faTiktok } from "@fortawesome/free-brands-svg-icons";
@@ -34,14 +28,12 @@ export default function Footer() {
 
           <section className="mb-4">
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt
-              distinctio earum repellat quaerat voluptatibus placeat nam,
-              commodi optio pariatur est quia magnam eum harum corrupti dicta,
-              aliquam sequi voluptate quas.
+              Se desideri qualsiasi tipo di informazione non esitare a
+              contattarci!!
             </p>
           </section>
 
-          <section className={` ${styles.containerContact}`}>
+          <section className={`${styles.containerContact}`}>
             <MDBRow>
               <MDBCol lg="3" md="6" className="-4 mb-md-0">
                 <h5 className="text-uppercase">E-MAIL</h5>
@@ -97,7 +89,7 @@ export default function Footer() {
           </section>
         </MDBContainer>
 
-        <div
+        {/*<div
           className="text-center p-3"
           style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
         >
@@ -105,7 +97,7 @@ export default function Footer() {
           <a className="text-white" href="https://mdbootstrap.com/">
             MDBootstrap.com
           </a>
-        </div>
+        </div>*/}
       </MDBFooter>
     </div>
   );

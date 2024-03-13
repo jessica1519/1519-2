@@ -1,3 +1,5 @@
+import React, { useState } from "react";
+import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import {
   MDBBtn,
   MDBCard,
@@ -9,13 +11,71 @@ import {
   MDBRow,
   MDBTypography,
 } from "mdb-react-ui-kit";
-import React from "react";
 
 import styles from "./Payment.module.css";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 
-export default function Pay() {
+const CheckoutForm = () => {
+  const [loading, setLoading] = useState(false);
+  const stripe = useStripe();
+  const elements = useElements();
+
+  const sendPaymentDataToServer = async (paymentMethodId) => {
+    try {
+      const response = await fetch(
+        "https://api.stripe.com/v1/payment_intents",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ paymentMethodId }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Failed to send payment data to server");
+      }
+
+      // Handle success response from the server
+    } catch (error) {
+      console.error("Error sending payment data to server:", error.message);
+      // Handle error
+    }
+  };
+
+  const handleSubmit = async (e) => {
+    sendPaymentDataToServer();
+    e.preventDefault();
+
+    if (!stripe || !elements) {
+      return;
+    }
+
+    setLoading(true);
+
+    const { error, paymentMethod } = await stripe.createPaymentMethod({
+      type: "card",
+      card: elements.getElement(CardElement),
+      billing_details: {
+        name: e.target.name.value,
+        email: e.target.email.value,
+      },
+    });
+
+    setLoading(false);
+
+    if (error) {
+      console.error(error);
+    } else {
+      console.log(paymentMethod);
+      // Handle successful payment
+      //const paymentMethodId = result.paymentMethod.id;
+      // Example: sendPaymentDataToServer(paymentMethodId);
+    }
+  };
+
   return (
     <>
       <Header></Header>
@@ -32,7 +92,6 @@ export default function Pay() {
                     We accept
                   </MDBTypography>
                 </div>
-
                 <MDBCard className="mb-4 mb-lg-0">
                   <MDBCardBody>
                     <MDBCardImage
@@ -61,58 +120,7 @@ export default function Pay() {
                     />
                   </MDBCardBody>
                 </MDBCard>
-
-                <form className="mt-4">
-                  <MDBInput
-                    className="mb-4"
-                    label="Cardholder's Name"
-                    type="text"
-                    size="lg"
-                    placeholder="Cardholder's Name"
-                    contrast
-                  />
-
-                  <MDBInput
-                    className="mb-4"
-                    label="Card Number"
-                    type="text"
-                    size="lg"
-                    minLength="19"
-                    maxLength="19"
-                    placeholder="1234 5678 9012 3457"
-                    contrast
-                  />
-
-                  <MDBRow className="mb-4">
-                    <MDBCol md="6">
-                      <MDBInput
-                        className="mb-4"
-                        label="Expiration"
-                        type="text"
-                        size="lg"
-                        minLength="7"
-                        maxLength="7"
-                        placeholder="MM/YYYY"
-                        contrast
-                      />
-                    </MDBCol>
-                    <MDBCol md="6">
-                      <MDBInput
-                        className="mb-4"
-                        label="Cvv"
-                        type="text"
-                        size="lg"
-                        minLength="3"
-                        maxLength="3"
-                        placeholder="&#9679;&#9679;&#9679;"
-                        contrast
-                      />
-                    </MDBCol>
-                  </MDBRow>
-                </form>
-
                 <hr />
-
                 <div className="d-flex justify-content-between">
                   <p className="mb-2">Subtotal</p>
                   <p className="mb-2">$4798.00</p>
@@ -127,9 +135,34 @@ export default function Pay() {
                   <p className="mb-2">Total(Incl. taxes)</p>
                   <p className="mb-2">$4818.00</p>
                 </div>
-                <div className={styles.containerBtn}>
-                  <MDBBtn className={styles.btnPayment}>Pay Now</MDBBtn>
-                </div>
+
+                <form onSubmit={handleSubmit} className="mt-4">
+                  <label className="mb-4">
+                    Name / Surname
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Name / Surname"
+                      required
+                    />
+                  </label>
+
+                  <label className="mb-4">
+                    Email
+                    <input type="email" name="email" required />
+                  </label>
+                  <CardElement />
+
+                  <div className={styles.containerBtn}>
+                    <button
+                      type="submit"
+                      disabled={!stripe || loading}
+                      className={styles.btnPayment}
+                    >
+                      Pay Now
+                    </button>
+                  </div>
+                </form>
               </MDBCardBody>
             </MDBCol>
           </MDBRow>
@@ -138,4 +171,6 @@ export default function Pay() {
       <Footer></Footer>
     </>
   );
-}
+};
+
+export default CheckoutForm;

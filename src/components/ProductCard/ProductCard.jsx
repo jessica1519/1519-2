@@ -16,7 +16,7 @@ function ProductCard({ src, title, description, price, color, size, id }) {
         {size && <Card.Text>Donna/Uomo</Card.Text>}
         {color && <Card.Text>Bianco/Nero</Card.Text>}
         <div className={styles.containerBtnPrice}>
-          <Card.Text>{price}</Card.Text>
+          <Card.Text>{price}€</Card.Text>
           <Button className={styles.btnCardShop} variant="primary">
             <Link className={styles.linkBtn} to={"/shop/" + id}>
               SEE MORE
