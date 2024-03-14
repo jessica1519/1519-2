@@ -6,7 +6,7 @@
   "homepage": "https://gitname.github.io/-1519",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "next build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
@@ -38,7 +38,8 @@
     "react-leaf-carousel": "^3.0.0",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.21.3",
-    "react-stripe-elements": "^6.1.2"
+    "react-stripe-elements": "^6.1.2",
+    "stripe": "^14.20.0"
   },
   "devDependencies": {
     "@iconify/react": "^4.1.1",
