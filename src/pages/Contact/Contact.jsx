@@ -5,6 +5,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import SocialBar from "../../components/SocialBar/SocialBar.jsx";
+import Footer from "../../components/Footer/Footer.jsx";
 
 function Contact() {
   return (
@@ -64,6 +65,7 @@ function Contact() {
           </Col>
         </Row>
       </Container>
+      <Footer></Footer>
     </div>
   );
 }

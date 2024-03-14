@@ -30,7 +30,7 @@ export default function Header() {
               <Link className={styles.LinkNavBar} to="/shop">
                 SHOP
               </Link>
-              <Link className={styles.LinkNavBar} to="/contact">
+              <Link className={styles.LinkNavBarContact} to="/contact">
                 CONTACT
               </Link>
               <div className={styles.containerCart}>

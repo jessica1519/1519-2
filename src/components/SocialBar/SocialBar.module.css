@@ -1,5 +1,5 @@
 .iconSocial {
-  color: black;
+  color: #3a0ca3;
   width: 2rem !important;
   height: 2rem !important;
   padding-left: 1rem;
@@ -12,5 +12,5 @@
 }
 .iconSocial:hover {
   background-color: white;
-  color: black;
+  color: #f72585;
 }
