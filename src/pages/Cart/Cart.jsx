@@ -22,18 +22,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 
 export default function Cart() {
-  const { shoppingCart, itemQuantity, sum, deleteItem, findItem } =
-    useContext(CartContext);
-
-  const totalPrice = shoppingCart.reduce(
-    (acc, item) => acc + item.price * item.quantity,
-    0
-  );
-
-  const formattedTotalPrice = `$${totalPrice.toFixed(2)}`;
-  const normalShipping = 5.0;
-  const totalNormaleShipping = totalPrice + normalShipping;
-  const totalPriceShipping = `$${totalNormaleShipping.toFixed(2)}`;
+  const {
+    shoppingCart,
+    itemQuantity,
+    sum,
+    deleteItem,
+    findItem,
+    totalPriceShipping,
+    formattedTotalPrice,
+  } = useContext(CartContext);
 
   return (
     <>
@@ -176,12 +173,22 @@ export default function Cart() {
                             {formattedTotalPrice}
                           </MDBTypography>
                         </div>
+                        <div className="d-flex justify-content-between mb-4">
+                          <MDBTypography
+                            tag="h5"
+                            className="text-uppercase mb-3"
+                          >
+                            Shipping
+                          </MDBTypography>
+                          <MDBTypography
+                            tag="h5"
+                            className="text-uppercase mb-3"
+                          >
+                            € 5.00
+                          </MDBTypography>
+                        </div>
 
-                        <MDBTypography tag="h5" className="text-uppercase mb-3">
-                          Shipping
-                        </MDBTypography>
-
-                        <div className="mb-4 pb-2">
+                        {/*<div className="mb-4 pb-2">
                           <select
                             className="select p-2 rounded bg-grey"
                             style={{ width: "100%" }}
@@ -191,7 +198,7 @@ export default function Cart() {
                             <option value="3">Three</option>
                             <option value="4">Four</option>
                           </select>
-                        </div>
+                        </div>*/}
 
                         <MDBTypography tag="h5" className="text-uppercase mb-3">
                           Give code

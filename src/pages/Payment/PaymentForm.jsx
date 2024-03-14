@@ -15,8 +15,12 @@ import {
 import styles from "./Payment.module.css";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
+import { CartContext } from "../../store/shopping-cart-context";
+import { useContext } from "react";
 
 const CheckoutForm = () => {
+  const { totalPriceShipping, normalShipping, formattedTotalPrice } =
+    useContext(CartContext);
   const [loading, setLoading] = useState(false);
   const stripe = useStripe();
   const elements = useElements();
@@ -123,17 +127,17 @@ const CheckoutForm = () => {
                 <hr />
                 <div className="d-flex justify-content-between">
                   <p className="mb-2">Subtotal</p>
-                  <p className="mb-2">$4798.00</p>
+                  <p className="mb-2">{formattedTotalPrice}</p>
                 </div>
 
                 <div className="d-flex justify-content-between">
                   <p className="mb-2">Shipping</p>
-                  <p className="mb-2">$20.00</p>
+                  <p className="mb-2">{normalShipping}</p>
                 </div>
 
                 <div className="d-flex justify-content-between">
                   <p className="mb-2">Total(Incl. taxes)</p>
-                  <p className="mb-2">$4818.00</p>
+                  <p className="mb-2">{totalPriceShipping}</p>
                 </div>
 
                 <form onSubmit={handleSubmit} className="mt-4">

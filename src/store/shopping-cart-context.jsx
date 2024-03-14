@@ -4,6 +4,17 @@ export const CartContext = createContext();
 
 export const CartProvider = ({ children }) => {
   const [shoppingCart, setShoppingCart] = useState([]);
+
+  const totalPrice = shoppingCart.reduce(
+    (acc, item) => acc + item.price * item.quantity,
+    0
+  );
+
+  const formattedTotalPrice = `$${totalPrice.toFixed(2)}`;
+  const shipping = 5.0;
+  const totalNormalShipping = totalPrice + shipping;
+  const normalShipping = `$${shipping.toFixed(2)}`;
+  const totalPriceShipping = `$${totalNormalShipping.toFixed(2)}`;
   function findElement(product) {
     const isItemInCart = shoppingCart.find(
       (item) =>
@@ -62,6 +73,9 @@ export const CartProvider = ({ children }) => {
         sum,
         deleteItem,
         findItem,
+        totalPriceShipping,
+        formattedTotalPrice,
+        normalShipping,
       }}
     >
       {children}

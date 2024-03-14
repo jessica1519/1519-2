@@ -87,7 +87,9 @@ export default function ItemProduct({ product }) {
                 className={styles.btnAddCart}
                 variant="primary"
               >
-                Add to Cart
+                <Link className={styles.linkBtn} to={"/cart"}>
+                  ADD TO CART
+                </Link>
               </Button>
             </div>
           </Card.Body>

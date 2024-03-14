@@ -13,7 +13,10 @@
   color: black !important;
   background-color: transparent !important;
 }
-
+.linkBtn {
+  color: white !important;
+  text-decoration: none !important;
+}
 .btnAddCart {
   background-color: #3a0ca3 !important;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -25,6 +28,8 @@
 .btnAddCart:hover {
   transform: scale(1.1);
   background-color: #f72585 !important;
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
 }
 
 .linkCardShop {
