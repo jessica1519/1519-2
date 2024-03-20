@@ -219,7 +219,10 @@ export default function Cart() {
                           </MDBTypography>
                         </div>
 
-                        <Link className={styles.linkPayment} to="/payment">
+                        <Link
+                          className={styles.linkPayment}
+                          to="/form-shipping"
+                        >
                           Payment
                         </Link>
                       </div>

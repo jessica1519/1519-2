@@ -1,16 +1,15 @@
 import React, { useState } from "react";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 import {
-  MDBBtn,
   MDBCard,
   MDBCardBody,
   MDBCardImage,
   MDBCol,
   MDBContainer,
-  MDBInput,
   MDBRow,
   MDBTypography,
 } from "mdb-react-ui-kit";
+import { Link } from "react-router-dom";
 
 import styles from "./Payment.module.css";
 import Header from "../../components/Header/Header";
@@ -18,25 +17,26 @@ import Footer from "../../components/Footer/Footer";
 import { CartContext } from "../../store/shopping-cart-context";
 import { useContext } from "react";
 
-const CheckoutForm = () => {
+const PaymentForm = () => {
   const { totalPriceShipping, normalShipping, formattedTotalPrice } =
     useContext(CartContext);
   const [loading, setLoading] = useState(false);
   const stripe = useStripe();
   const elements = useElements();
 
-  const sendPaymentDataToServer = async (paymentMethodId) => {
+  const sendPaymentDataToServer = async () => {
     try {
       const response = await fetch(
-        "https://api.stripe.com/v1/payment_intents",
+        "http://localhost:3001/create-payment-intent",
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ paymentMethodId }),
+          body: JSON.stringify({ amount: 20000, currency: "USD" }),
         }
       );
+      console.log(response, "response");
 
       if (!response.ok) {
         throw new Error("Failed to send payment data to server");
@@ -50,7 +50,6 @@ const CheckoutForm = () => {
   };
 
   const handleSubmit = async (e) => {
-    sendPaymentDataToServer();
     e.preventDefault();
 
     if (!stripe || !elements) {
@@ -67,6 +66,33 @@ const CheckoutForm = () => {
         email: e.target.email.value,
       },
     });
+
+    //sendPaymentDataToServer();
+    // Inside handleSubmit after createPaymentMethod
+    const response = await fetch("http://localhost:3001/process-payment", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        payment_method_id: paymentMethod.id,
+        //amount:{}
+      }),
+    });
+
+    //const responseData = await response.json();
+
+    if (response.ok) {
+      // Payment succeeded, handle success
+      // For example, show a success message to the user
+      alert("Payment successful! Thank you for your purchase.");
+
+      // Redirect to a thank you page
+      // window.location.href = '/thank-you'; // Replace '/thank-you' with your actual thank you page URL
+    } else {
+      // Payment failed, handle error
+      alert("Payment failed. Please try again.");
+    }
 
     setLoading(false);
 
@@ -88,6 +114,9 @@ const CheckoutForm = () => {
         style={{ backgroundColor: "transparent" }}
       >
         <MDBContainer className="py-5 h-100">
+          <Link className={styles.link} to="/form-shipping">
+            « Back to shipping
+          </Link>
           <MDBRow className="justify-content-center align-items-center h-100">
             <MDBCol lg="5">
               <MDBCardBody className={styles.cardBody}>
@@ -177,4 +206,4 @@ const CheckoutForm = () => {
   );
 };
 
-export default CheckoutForm;
+export default PaymentForm;
